@@ -1,0 +1,26 @@
+#include<stdio.h>
+	int main()
+	{
+		int dk,sa,kalan;    // for example give seconds 3600. algorithm gives us 1 hour 0 minute 0 :)
+	int saniye;
+		int sn;
+		printf("Enter the number of seconds and the number of seconds you want to convert:");
+		scanf("%d",&sn);
+		
+		dk=sn/60; 
+		if(dk>=60)
+		{
+			sa=dk/60;
+			dk=dk%60;
+			saniye=sn%60;
+		}
+    
+		else  {		
+		saniye=sn%60;
+		sa=0;
+	}
+  
+		printf("%d hour %d minute %d second",sa,dk,saniye) ;	
+		return 0;
+		
+	}
