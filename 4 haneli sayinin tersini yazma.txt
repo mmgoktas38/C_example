@@ -1,0 +1,18 @@
+#include<stdio.h>
+	int main()
+	{ 	int a,b,c,d,f,g,h,s1,s2,s3,s4;
+	printf("4 haneli sayi giriniz:");
+	scanf("%d",&a);
+
+	
+	
+	b=a%1000; c=a-b; s1=c/1000;			// 4 haneli girilen sayýnýn tersini verme programý
+	d=b%100; f=b-d; s2=f/100;
+	s4=d%10; h=d-s4; s3=h/10;
+	printf("girdiginiz sayinin tersi: \n ");
+	printf("%d%d%d%d",s4,s3,s2,s1);
+	
+	
+		return 0;
+	}
+	
