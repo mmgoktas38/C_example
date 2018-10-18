@@ -1,15 +1,15 @@
 #include<stdio.h>
 	int main()
 	{ 	int a,b,c,d,f,g,h,s1,s2,s3,s4;
-	printf("4 haneli sayi giriniz:");
+	printf("Enter a 4 digits number:");
 	scanf("%d",&a);
 
 	
 	
-	b=a%1000; c=a-b; s1=c/1000;			// 4 haneli girilen sayýnýn tersini verme programý
+	b=a%1000; c=a-b; s1=c/1000;	// this algorihm is that who enters 4 digits number. this algorithm give us inverse of this digits 
 	d=b%100; f=b-d; s2=f/100;
 	s4=d%10; h=d-s4; s3=h/10;
-	printf("girdiginiz sayinin tersi: \n ");
+	printf("inverse \n ");
 	printf("%d%d%d%d",s4,s3,s2,s1);
 	
 	
