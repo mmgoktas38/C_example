@@ -1,0 +1,30 @@
+#include<stdio.h>
+	int main()
+	{					//Algoritmada kullanıcıdan bilgi alınmıyor. ikiz asal demek aralarında 2 fark olan asallardır. 
+						// Bu algoritma en buyuk ikiz asalları buluyor.Bulurken 100 den başlayıp geriye doğru tüm sayıları tarıyor.
+						//ikiz asalları bulunca algoritma duruyor ve ekrana yazdırıyor.
+		int x,y,z,a;
+		x=100;
+			printf("en buyuk ikiz asal sayiyi bulan algoritma (ikiz asal sayi=aralarinda 2 fark olacak)\n");
+		enbas:
+		if(x%2==1 && x%3!=0 && x%5!=0 && x%7!=0)
+		{	
+			y=x-2;
+			if(y%2==1 && y%3!=0 && y%5!=0 && y%7!=0)
+			{
+				printf("%d %d ikiz asaldir",x,y);
+				
+			}
+			else
+		    {
+				x--; goto enbas;			
+			}
+			
+			}
+			else 
+			{
+				x--; goto enbas;
+			}
+					
+		return 0;
+	}
