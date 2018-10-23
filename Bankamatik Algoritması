@@ -1,0 +1,110 @@
+#include<stdio.h>
+#include<conio.h>
+
+	int main()        // Basit bir bankamatik algoritması :) 
+	{
+	
+		int bakiye=1000;
+	
+		int islem;
+		int cekilen;
+		int yatirilan;
+		int havale;
+		int x;
+		enbas :	                        //  enbas: yazıp nereye dönmek istiyorsak oraya gider. goto enbas; diyoz nerdeysekte
+		printf("1:Para cekme.\n 2:Para yatirma.\n 3:Havale yapma.\n 4:Bakiye sorgulama.\n 5:Kart iade.\n\n\n");
+		printf("Lutfen bir islem seciniz:");
+		scanf("%d",&islem);
+		switch(islem)
+		{
+		case 1: 
+		printf("Bakiyeniz %d dir:\n",bakiye);
+		printf("Cekilecek para miktarini giriniz:");
+		scanf("%d",&cekilen);
+		if(cekilen>bakiye)
+		{
+		printf("yetersiz bakiye\n");
+		printf("Bakiyeniz %d dir:\n",bakiye);
+		printf("Cekilecek para miktarini giriniz:");
+		scanf("%d",&cekilen);
+		printf("Bakiyeniz %d ",bakiye);
+		if(cekilen>bakiye)
+		{
+		printf("yetersiz bakiye\t");
+		printf("islem iptal\n");
+		printf("Ana menuye donmek icin 1 tusuna basin.\n Cikmak icin 0 tusuna basin");
+		scanf("%d",&x);
+		if(x==1)
+		{
+		
+		goto enbas;
+		
+		}break;}
+		break;}
+		bakiye = bakiye - cekilen;
+		printf("kalan Bakiyeniz %d dir.",bakiye);
+		printf("Ana menuye donmek icin 1 tusuna basin.\n Cikmak icin 0 tusuna basin");
+		scanf("%d",&x);
+		if(x==1)
+		
+		
+		goto enbas;
+
+		break ; 											// break; unutma !!!!!!!
+		case 2:
+		printf("Bakiyeniz %d dir:\n",bakiye);
+		printf("Yatirilacak para miktarini giriniz:");
+		scanf("%d",&yatirilan);
+		bakiye= bakiye+ yatirilan;	
+		printf("Bakiyeniz %d dir.\n",bakiye);
+		printf("Ana menuye donmek icin 1 tusuna basin.\n Cikmak icin 2 tusuna basin");
+		scanf("%d",&x);
+		if(x==1)
+		{
+		
+		goto enbas;}
+		break ;
+		case 3: printf("Havale yapilacak para miktarini giriniz:");
+		scanf("%d",&havale);
+		bakiye = bakiye - havale;
+		printf("Bakiyeniz %d dir.",bakiye);
+	
+		printf("Ana menuye donmek icin 1 tusuna basin.\n Cikmak icin 0 tusuna basin");
+		scanf("%d",&x);
+		if(x==1)
+		{
+		
+		goto enbas;
+		
+		}
+		break;
+		case 4:
+		printf("Bakiyeniz %d ",bakiye);
+		
+		printf("Ana menuye donmek icin 1 tusuna basin.\n Cikmak icin 0 tusuna basin");
+		scanf("%d",&x);
+		if(x==1)
+		{
+		
+		goto enbas;
+		
+		}
+		break; 
+		case 5:
+		 printf("Iyi gunler yine bekleriz.");
+		 break;
+		 default: printf("Hatali secim yaptiniz.")	;
+	
+		printf("Ana menuye donmek icin 1 tusuna basin.\n Cikmak icin 0 tusuna basin");
+		scanf("%d",&x);
+		if(x==1)
+		{
+		
+		goto enbas;
+		
+		}
+		 }
+	
+		
+		return 0;
+	}
