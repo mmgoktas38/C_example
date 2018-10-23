@@ -1,0 +1,31 @@
+#include<stdio.h>
+	int main()
+	{			//4 basamakli bir sayinin sayi degerleri toplaminin küpü kendisine esit olan sayiyi bulan algoritmaya hosgeldiniz
+		int i,a,b,c,d,k,m,n,p,x,y,kup,sayi,f;
+		printf("4 basamakli bir sayinin sayi degerleri toplaminin küpü kendisine esit olan sayiyi bulan algoritmaya hosgeldiniz.\n");
+		a=9999;
+		f=a;
+		for(i=1;i;i++)
+		{	f;
+		b=f&1000; c=f-b; d=c/1000;	//dnyx= 4 basamakli sayimizin basamak sıralaması.
+		k=b%100; m=b-k;
+		n=m/100; x=k%10; p=k-x;
+		y=p/10;
+		kup=(d+n+y+x)*(d+n+y+x)*(d+n+y+x);
+		sayi=(1000*d+100*n+10*y+x);
+		if(kup==sayi)
+		
+			{
+			printf("(%d+%d+%d+%d)nin kupu %d ye esit\n",d,n,y,x,sayi);
+			return 0;
+			}
+		else
+			{
+			f--;
+			}
+	    } 
+		
+		
+		
+		return 0;
+	}
