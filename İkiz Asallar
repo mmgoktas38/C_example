@@ -5,22 +5,32 @@
 						//ikiz asalları bulunca algoritma duruyor ve ekrana yazdırıyor.
 		int x,y,z,a;
 		x=100;
-			printf("en buyuk ikiz asal sayiyi bulan algoritma (ikiz asal sayi=aralarinda 2 fark olacak)\n");
+		printf("en buyuk ikiz asal sayiyi bulan algoritma (ikiz asal sayi=aralarinda 2 fark olacak)\n");
 		enbas:
-		if(x%2==1 && x%3!=0 && x%5!=0 && x%7!=0)
+		if(x%2==1 && x%3!=0 && x%5!=0 && x%7!=0 && x>0 && x<100)
 		{	
 			y=x-2;
-			if(y%2==1 && y%3!=0 && y%5!=0 && y%7!=0)
-			{
-				printf("%d %d ikiz asaldir",x,y);
-				
-			}
-			else
-		    {
-				x--; goto enbas;			
-			}
 			
+			if(y%2==1 && y%3!=0 && y%5!=0 && y%7!=0 && y>0 && y<100)
+			{
+				printf("%d %d ikiz asaldir\n",x,y);
+				x--;
+				if(y==3)
+				{
+					printf("algoritmamiz bitmiistir.");
+					return 0;
+				}
+				else
+				{
+					goto enbas;
+				}
 			}
+		else
+	       {
+			x--; goto enbas;			
+		}
+			
+		}
 			else 
 			{
 				x--; goto enbas;
